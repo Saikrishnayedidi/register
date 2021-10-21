@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <link rel='stylesheet' href="reg.css" />
+    <script defer src="valid.js"></script>
+</head>
+
+<body>
+    <div class='body'>
+        <div class='header'>
+            <h1>student registration form example</h1>
+            <p>a student registration form in html</p>
+
+            </p>
+        </div>
+        <div class="container">
+
+            <form id="form">
+                <div>
+
+                    <label class='f'>First name:</label>
+                    <input id='fname' name='name' type="text" class="required" data-validtype="string"
+                        data-name="1st ">*
+                    <div class='errors'></div>
+                </div>
+                <div> <label>Last name:</label>
+                    <input id='lastnName' name='lastName' type="text" class='required' data-validtype="string"
+                        data-name="Last ">*
+                    <div class='errors' id='lnameErr'></div>
+                </div>
+                <div> <label>Father name:</label>
+                    <input type="text" id='fathername'>
+                </div>
+                <div>
+                    <label>date of birth:</label>
+                    <input type="date" id="date" name="birthday" class="required" data-validtype="date"
+                        data-name="date">*
+                    <div class='errors ' id='dateerr'></div>
+                </div>
+                <div> <label>tel:</label>
+                    <input type="text" id='phone' value='' class="required" name='number' data-validtype="phone"
+                        data-name="phone">*
+                    <div class='errors' id='phoneerr'></div>
+                </div>
+                <div>
+                    <label>High School Name:</label>
+                    <input type="text" id='school' class="required" data-validtype="string" data-name="school">*
+                    <div class='errors' id='scherr'></div>
+                </div>
+                <div> <label>pernment adress:</label>
+                    <input name="message" id='adress' class="required" data-validtype="string" data-name='address'>*
+                    <div class='errors'></div>
+                </div>
+                <div>
+                    <label>your level:</label>
+                    <select id="year" class='dropbox' name="year">
+                        <option value="1st year">1st year</option>
+                        <option value="2nd year">2nd year</option>
+                        <option value="3rd year">3rd year</option>
+                        <option value="4th year">4th year</option>
+                    </select>
+                </div>
+
+                <div><label>Email:</label>
+                    <input type="text" id='email' class="required" data-validtype="email" data-name='email '>*
+                    <div class='errors' id='emailerr'></div>
+                </div>
+                <div> <label>Degree Program:</label>
+                    <select id="degree" class='dropbox' name="degree">
+                        <option value="it">it</option>
+                        <option value="cse">cse</option>
+                        <option value="eee">eee</option>
+                        <option value="mech">mech</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">upload image</label>
+                    <input type="file" id="file"  class="required " data-validtype="string"><br>
+                   
+
+                </div>
+                <div>
+                    <label></label>
+                    <input type="submit"></input>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+        <table id="tables">
+            <thead>
+                <tr>
+                    <th>
+                        full name
+                    </th>
+                    <th>
+                        date of birth
+                    </th>
+                    <th>
+                        phone
+                    </th>
+                    <th>
+                        school
+                    </th>
+                    <th>
+                        adress
+                    </th>
+                    <th>
+                        email
+                    </th>
+                    <th>
+                        image
+                      
+                    </th>
+                   
+                </tr>
+            </thead>
+           
+        </table>
+
+    </div>
+
+
+</body>
+
+</html>

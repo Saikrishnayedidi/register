@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  h1,p{
+      text-align: center;
+      margin-bottom: 1rem;
+  }
+  
+ label{
+     display: inline-block;
+     width: 100px;
+ }input{
+     margin-bottom: 15px;
+     padding: 7px;
+     width: 173px;
+ }
+ #error{
+     font-size: 10px;
+ }
+ .errors,.error{
+    position: relative;
+    color: red;
+    font-size: 14px;
+    left: 7rem;
+    top: 0rem;
+}
+
+
+ .container{
+  
+     margin: auto;
+     width: fit-content;
+    margin: auto;
+    background-color:white;
+   
+    box-shadow: 0px 1px 9px 0px;
+   
+    padding: 21px;
+    position: relative;
+    left: -33rem;
+ }
+ #form{
+     padding: 4rem;
+ }
+
+ .dropbox{
+    margin-bottom: 12px;  
+    display: inline-block;
+    width: 174px;
+    padding: 7px;
+ }
+ .body{
+     background-color: rgb(157, 158, 219);
+     
+ }
+ #tables{
+    left: 36rem;
+    bottom: 36rem;
+    border: 1px solid white;
+    position: relative;
+    border-collapse: collapse;
+}
+th,td{
+    border: 1px solid white;
+  
+}
+
+th {
+    padding: 1.5rem;
+}
+td{
+    padding: 0.5rem;
+}
+ 

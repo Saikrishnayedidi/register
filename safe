@@ -1,0 +1,140 @@
+function printeError(id, msg) {
+    document.getElementById(id).innerHTML = msg;
+}
+
+
+
+
+
+
+function submitform() {
+    var isValid=true
+    let firstName = document.getElementById('fname').value;
+    let lastName = document.getElementById('password').value;
+    let date = document.getElementById('date').value;
+    let phone = document.getElementById('number').value;
+    let school = document.getElementById('school').value;
+    let adress = document.getElementById('adress').value;
+    let email = document.getElementById('email').value
+   
+
+    if (firstName == "") {
+        printeError("nameErr", "Please enter your firstname");
+         isValid=false;
+    } else {
+        var regex = /^[a-zA-Z\s]+$/;
+        if (regex.test(firstName) === false) {
+            printeError("nameErr", "name must be string");
+        }
+        else {
+            printeError("nameErr", "");
+            
+
+        }
+    }
+
+var requiredItems = document.querySelectorAll('.required');
+
+    // Validate name
+    if (lastName == "") {
+        printeError("lnameErr", "Please enter your lastname");
+        isValid =false;
+
+    } else {
+        var regex = /^[a-zA-Z\s]+$/;
+        if (regex.test(lastName) === false) {
+            printeError("lnameErr", "name must be string");
+        }
+        else {
+            printeError("lnameErr", "");
+           
+        }
+    }
+    if (date == "") {
+        printeError("dateerr", "please enter a  date");
+        isValid=false;
+
+    }
+    else {
+        printeError('dateerr', '');
+        
+
+    }
+    // Validate name
+    if (phone == "") {
+        printeError("numerr", "Please enter your  phone number");
+        isValid=false;
+
+    } else {
+        var regex = /^[1-9]\d{9}$/;
+        if (regex.test(phone) === false) {
+            printeError("numerr", "must b in 10 number ");
+        }
+        else {
+            printeError("numerr", "");
+          
+
+        }
+    }
+
+    if (school == "") {
+        printeError("scherr", "Please enter ur school name");
+        isValid=false;
+
+    } else {
+        var regex = /^[a-zA-Z\s]+$/; 
+        if (regex.test(school) === false) {
+            printeError("scherr", "Please enter a vlid");
+        }
+        else {
+            printeError("scherr", "");
+         
+
+        }
+    }
+
+    if (adress == "") {
+        printeError("adresserr", "Please enter your adress");
+        isValid=false;
+
+    } else {
+        var regex = /^[a-zA-Z\s]+$/;
+        if (regex.test(adress) === false) {
+            printeError("adresserr", "Please enter a valid adress");
+        }
+        else {
+            printeError("adresserr", "");
+            
+        }
+    }
+    if (email == "") {
+        printeError("emailerr", "Please enter your mail");
+        isValid=false;
+
+    } else {
+        var regex = /^\S+@\S+\.\S+$/;
+        if (regex.test(email) === false) {
+            printeError("emailerr", "Please enter a valid mail");
+
+        }
+        else {
+            printeError("emailerr", "");
+           
+
+        }
+    }
+
+    if(isValid)
+    {
+        let datas ={
+            firstname:firstName,
+            lastname:lastName,
+            date:date,
+            phone:phone,
+            school:school,
+            adress:adress,
+            email:email
+        }
+        console.log(JSON.stringify(datas))
+    }
+} 
